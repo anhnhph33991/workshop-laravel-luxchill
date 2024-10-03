@@ -1,0 +1,2 @@
+@extends('client.layouts.master')
+
