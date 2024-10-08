@@ -7,9 +7,7 @@ use App\Http\Middleware\FlagMiddleware;
 use Illuminate\Support\Facades\Route;
 
 
-Route::middleware(['auth', FlagMiddleware::class])->group(function () {
+Route::middleware('permissions:admin')->group(function () {
     Route::get('/', [DashBoardController::class, 'index'])->name('dashboard');
     Route::resource('employees', EmployeeController::class);
-
-    Route::get('/luxchill', [DashBoardController::class, 'index'])->withoutMiddleware('auth');
 });
