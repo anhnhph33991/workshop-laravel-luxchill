@@ -1,15 +1,24 @@
 ## WORKSHOP LARAVEL
 
-### B3 Preview:
+## API AUTH SANCTUM:
 
-```- Index```
-<img src="./public/assets/images/employee-index.png">
-```- Create```
-<img src="./public/assets/images/employee-create.png">
-```- Edit```
-<img src="./public/assets/images/employee-edit.png">
-```- Show```
-<img src="./public/assets/images/employee-show.png">
+```
+1. Mở file: config/debugbar.php:
 
+- Thêm : 'except' => [
+            'api*'
+        ]
 
+Mô Tả: ignored api routes
 
+2.Mở File: .env
+
+- Thêm: DEBUGBAR_ENABLED=false
+
+Mô Tả: Tắt bỏ debugbar
+
+Khuyên dùng: Bước 1
+
+Tác dụng: Tránh 1 số lỗi conflict khi dùng api
+
+```
