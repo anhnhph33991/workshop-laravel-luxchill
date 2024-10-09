@@ -16,10 +16,16 @@
             <li class="menu-title" key="t-administration">Administration</li>
 
             <li class="{{ activeMenuLi('admin/employees') }}">
-                <a href="{{ route('admin.employees.index') }}"
-                   class="waves-effect {{ activeMenu('admin/employees') }}">
+                <a href="{{ route('admin.employees.index') }}" class="waves-effect {{ activeMenu('admin/employees') }}">
                     <i class="bx bx-receipt"></i>
                     <span key="t-employees">Employees</span>
+                </a>
+            </li>
+
+            <li class="{{ activeMenuLi('admin/users') }}">
+                <a href="{{ route('admin.users.index') }}" class="waves-effect {{ activeMenu('admin/users') }}">
+                    <i class="bx bx-receipt"></i>
+                    <span key="t-users">Users</span>
                 </a>
             </li>
 
