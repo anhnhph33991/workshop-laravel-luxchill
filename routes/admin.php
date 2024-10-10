@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashBoardController;
+use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\FlagMiddleware;
@@ -69,8 +70,10 @@ Route::get('/posts/{id}', function ($id) {
     dd($post->toArray());
 });
 
-
 // Comment 1-N
+
+
+Route::resource('students', StudentController::class);
 
 
 // Route::middleware('permissions:admin')->group(function () {

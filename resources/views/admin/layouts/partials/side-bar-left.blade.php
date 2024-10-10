@@ -24,8 +24,17 @@
 
             <li class="{{ activeMenuLi('admin/users') }}">
                 <a href="{{ route('admin.users.index') }}" class="waves-effect {{ activeMenu('admin/users') }}">
-                    <i class="bx bx-receipt"></i>
+                    <i class="ri-user-3-line"></i>
                     <span key="t-users">Users</span>
+                </a>
+            </li>
+
+            <li class="{{ activeMenuLi('admin/students') }}">
+                <a href="{{ route('admin.students.index') }}" class="waves-effect {{ activeMenu('admin/students') }}">
+                    {{-- <i class="fa-solid fa-graduation-cap"></i> --}}
+
+                    <i class="ri-graduation-cap-line"></i>
+                    <span key="t-students">Students</span>
                 </a>
             </li>
 

@@ -8,8 +8,7 @@
 <link href="{{ asset('assets/theme/admin/libs/magnific-popup/magnific-popup.css') }}" rel="stylesheet" type="text/css" />
 
 <!-- Bootstrap Css -->
-<link href="{{ asset('assets/theme/admin/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet"
-    type="text/css" />
+<link href="{{ asset('assets/theme/admin/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
 <!-- Icons Css -->
 <link href="{{ asset('assets/theme/admin/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
 <!-- App Css-->
@@ -20,3 +19,5 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 {{-- Fontawesome --}}
 <script src="https://kit.fontawesome.com/12ffb45aae.js" crossorigin="anonymous"></script>
+{{-- remixicon --}}
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
