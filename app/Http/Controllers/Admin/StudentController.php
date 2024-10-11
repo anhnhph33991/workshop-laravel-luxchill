@@ -21,10 +21,15 @@ class StudentController extends Controller
     private const VIEW_PATH = 'admin.students.';
     public function index()
     {
+        $keyword = request()->get('keyword');
 
         $students = Student::with(['passport', 'classroom', 'subjects'])
+            ->when($keyword, function ($query) use ($keyword) {
+                $query->search($keyword);
+            })
             ->latest('id')
-            ->paginate(1);
+            ->paginate(1)
+            ->appends(['keyword' => $keyword]);
 
         return view(self::VIEW_PATH . __FUNCTION__, compact('students'));
     }

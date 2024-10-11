@@ -29,4 +29,12 @@ class Student extends Model
     {
         return $this->belongsToMany(Subject::class);
     }
+
+    public function scopeSearch($query, $keyword)
+    {
+        return $query->where('name', 'LIKE', "%{$keyword}%")
+            ->orWhereHas('classroom', function ($q) use ($keyword) {
+                $q->where('name', 'LIKE', "%{$keyword}%");
+            });
+    }
 }
