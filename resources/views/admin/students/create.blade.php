@@ -51,13 +51,13 @@
                             <select id="select-classrom" class="select2 form-control select2-multiple" data-placeholder="Select Classroom..." name="student[classroom_id]">
                                 @foreach ($classrooms as $classroom)
                                 <option value="">Select Classroom</option>
-                                <option value="{{ $classroom->id }}" {{ old('student.classrom') == $classroom->id ? 'selected' : '' }}>
+                                <option value="{{ $classroom->id }}" {{ old('student.classroom_id') == $classroom->id ? 'selected' : '' }}>
                                     {{ $classroom->name }}
                                 </option>
                                 @endforeach
                             </select>
 
-                            @error('student.classrom')
+                            @error('student.classroom_id')
                             <div class="text-danger fst-italic">*{{ $message }}</div>
                             @enderror
 

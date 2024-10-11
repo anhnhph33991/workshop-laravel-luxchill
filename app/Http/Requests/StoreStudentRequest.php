@@ -54,14 +54,14 @@ class StoreStudentRequest extends FormRequest
     public function attributes()
     {
         return [
-            'student.name'              => 'name',
-            'student.email'             => 'email',
-            'student.classrom'          => 'classrom',
+            'student.name'                  => 'name',
+            'student.email'                 => 'email',
+            'student.classroom_id'          => 'classroom',
 
             //
-            'passport.passport_number'  => 'passport_number',
-            'passport.issued_date'      => 'issued_date',
-            'passport.expiry_date'      => 'expiry_date',
+            'passport.passport_number'      => 'passport_number',
+            'passport.issued_date'          => 'issued_date',
+            'passport.expiry_date'          => 'expiry_date',
         ];
     }
 }

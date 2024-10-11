@@ -34,7 +34,6 @@ class TaskController extends Controller
      */
     public function store(StoreTaskRequest $request, $projectId)
     {
-        $data = $request->validated();
         try {
             $project = Project::find($projectId);
 
@@ -42,9 +41,7 @@ class TaskController extends Controller
                 return ApiResponse::notFound('Project Not Found');
             }
 
-            $data['project_id'] = $projectId;
-
-            $task =  Task::create($data);
+            $task =  $project->tasks()->create($request->validated());
 
             return ApiResponse::success(
                 'Task created success',

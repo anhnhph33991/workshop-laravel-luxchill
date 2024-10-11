@@ -21,14 +21,7 @@ class ProjectController extends Controller
     {
         $projects = Project::query()->latest('id')->paginate(10);
 
-
         return ApiResponse::colection('projects', $projects);
-
-        // return response()->json([
-        //     'projects' => $projects
-        // ], Response::HTTP_OK);
-
-
     }
 
     /**
@@ -64,7 +57,6 @@ class ProjectController extends Controller
             Log::error($e->getMessage());
 
             if ($e instanceof ModelNotFoundException) {
-
                 return ApiResponse::notFound('Project Not Found');
             }
 
