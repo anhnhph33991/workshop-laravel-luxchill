@@ -31,10 +31,15 @@
 
             <li class="{{ activeMenuLi('admin/students') }}">
                 <a href="{{ route('admin.students.index') }}" class="waves-effect {{ activeMenu('admin/students') }}">
-                    {{-- <i class="fa-solid fa-graduation-cap"></i> --}}
-
                     <i class="ri-graduation-cap-line"></i>
                     <span key="t-students">Students</span>
+                </a>
+            </li>
+
+            <li class="{{ activeMenuLi('admin/transaction') }}">
+                <a href="{{ route('admin.transaction.index') }}" class="waves-effect {{ activeMenu('admin/transaction') }}">
+                    <i class="ri-exchange-dollar-line"></i>
+                    <span key="t-transaction">Transaction</span>
                 </a>
             </li>
 

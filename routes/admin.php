@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashBoardController;
 use App\Http\Controllers\Admin\StudentController;
+use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\FlagMiddleware;
@@ -75,6 +76,12 @@ Route::get('/posts/{id}', function ($id) {
 
 Route::resource('students', StudentController::class);
 
+Route::get('transaction', [TransactionController::class, 'index'])->name('transaction.index');
+Route::post('transaction/start', [TransactionController::class, 'start'])->name('transaction.start');
+
+Route::post('transaction/cancel', [TransactionController::class, 'cancel'])->name('transaction.cancel');
+Route::post('transaction/confirm', [TransactionController::class, 'confirm'])->name('transaction.confirm');
+Route::post('transaction/pay', [TransactionController::class, 'pay'])->name('transaction.pay');
 
 // Route::middleware('permissions:admin')->group(function () {
 
